@@ -30,9 +30,6 @@ https://github.com/JosuGuzman/SimulacionDeBolillero.git
 - .NET 8 (SDK .NET 8.0.105) - [Descargar](https://dotnet.microsoft.com/es-es/download/dotnet/8.0)
 - Visual Studio Code - [Descargar](https://code.visualstudio.com/#alt-downloads)
 - Git - [Descargar](https://git-scm.com/downloads)
-- MySQL - [Descargar](https://dev.mysql.com/downloads/mysql/)
-- Dapper - Micro ORM para .NET
-- Entity Framework Core - Para la gestión de datos en .NET
 
 ## Construido con 🛠️
 
