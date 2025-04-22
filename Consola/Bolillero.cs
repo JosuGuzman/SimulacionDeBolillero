@@ -1,6 +1,6 @@
 namespace Consola;
 
-public class Bolillero
+public class Bolillero : IClonable <Bolillero>
 {
     private readonly ISorteadorRandom _sorteador;
     private readonly List<int> _bolillasInside;
@@ -14,6 +14,19 @@ public class Bolillero
         _bolillasInside = new List<int>(bolillasIniciales);
         _sorteador = sorteador;
     }
+
+    private Bolillero(Bolillero original)
+    {
+        _bolillasInside = new List<int>(original._bolillasInside);
+        _bolillasOutside = new List<int>(original._bolillasOutside);
+        _sorteador = new Sorteador();        
+    }
+
+    public Bolillero Clonar()
+    {
+        return new Bolillero(this);
+    }
+
     public int SacarBolilla()
     {
         if (_bolillasInside.Count == 0)
@@ -52,7 +65,6 @@ public class Bolillero
         return true;
     }
 
-    
     public long JugarNVeces(IList<int> jugada, long veces)
     {
         long aciertos = 0;
