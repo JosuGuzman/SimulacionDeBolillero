@@ -10,3 +10,15 @@ C:\Users\josud\OneDrive\Documentos\GitHub\Simulaci-nDeBolillero\Consola\obj\Debu
 C:\Users\josud\OneDrive\Documentos\GitHub\Simulaci-nDeBolillero\Consola\obj\Debug\net8.0\refint\Core.dll
 C:\Users\josud\OneDrive\Documentos\GitHub\Simulaci-nDeBolillero\Consola\obj\Debug\net8.0\Core.pdb
 C:\Users\josud\OneDrive\Documentos\GitHub\Simulaci-nDeBolillero\Consola\obj\Debug\net8.0\ref\Core.dll
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\bin\Debug\net8.0\Core.deps.json
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\bin\Debug\net8.0\Core.dll
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\bin\Debug\net8.0\Core.pdb
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.AssemblyInfo.cs
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.sourcelink.json
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.dll
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\refint\Core.dll
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\Core.pdb
+c:\Users\Lab15-PC01\Documents\GitHub\SimulacionDeBolillero\Consola\obj\Debug\net8.0\ref\Core.dll
