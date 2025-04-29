@@ -1,5 +1,4 @@
 namespace Consola;
-
 public class Sorteador : ISorteadorRandom
 {
     private readonly Random _rnd = new Random();

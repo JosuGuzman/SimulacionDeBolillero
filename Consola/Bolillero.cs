@@ -1,5 +1,4 @@
 namespace Consola;
-
 public class Bolillero
 {
     private readonly ISorteadorRandom _sorteador;
