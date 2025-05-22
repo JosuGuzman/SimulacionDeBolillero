@@ -2,31 +2,32 @@ namespace Consola;
 
 public class Simulacion
 {
-    public long SimularSinHilos(Bolillero bolillero, IList<int> jugada, long cantidadSimulaciones)
+    public long SimularSinHilos(Bolillero bolillero, IList<int> jugada, long cantidad)
     {
-        return bolillero.JugarNVeces(jugada, cantidadSimulaciones);
+        return bolillero.JugarNVeces(jugada, cantidad);
     }
 
-    public async Task<long> SimularConHilosAsync(
-        Bolillero bolillero,
-        IList<int> jugada,
-        long cantidadSimulaciones,
-        int cantidadHilos)
+    public long SimularConHilos(Bolillero bolillero, IList<int> jugada, long cantidad, int hilos)
     {
-        long basePorHilo = cantidadSimulaciones / cantidadHilos;
-        long resto = cantidadSimulaciones % cantidadHilos;
+        long total = 0;
+        var resultados = new long[hilos];
+        var tareas = new List<Thread>();
+        long porHilo = cantidad / hilos;
 
-        var tareas = new List<Task<long>>();
-
-        for (int i = 0; i < cantidadHilos; i++)
+        for (int i = 0; i < hilos; i++)
         {
-            long simulaciones = basePorHilo + (i < resto ? 1 : 0);
-            Bolillero clon = bolillero.Clonar();
-
-            tareas.Add(Task.Run(() => clon.JugarNVeces(jugada, simulaciones)));
+            int idx = i;
+            tareas.Add(new Thread(() =>
+            {
+                var clon = (Bolillero)bolillero.Clone();
+                resultados[idx] = clon.JugarNVeces(jugada, porHilo);
+            }));
         }
 
-        long[] resultados = await Task.WhenAll(tareas);
-        return resultados.Sum();
+        tareas.ForEach(t => t.Start());
+        tareas.ForEach(t => t.Join());
+
+        foreach (var r in resultados) total += r;
+        return total;
     }
 }
