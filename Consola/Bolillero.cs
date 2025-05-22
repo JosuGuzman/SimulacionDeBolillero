@@ -1,9 +1,6 @@
-// Archivo: Bolillero.cs
-// Clase principal que representa un bolillero con bolillas numeradas.
-// Permite sacar bolillas al azar, reintegrarlas, y simular juegos de extracción.
 namespace Consola;
 
-public class Bolillero
+public class Bolillero : ICloneable
 {
     private readonly ISorteadorRandom _sorteador; // Inyectado para permitir aleatoriedad flexible (pruebas o producción).
     private readonly List<int> _bolillasInside; // Bolillas actualmente dentro del bolillero.
@@ -69,5 +66,15 @@ public class Bolillero
                 aciertos++;
 
         return aciertos;
+    }
+
+    public object Clone()
+    {
+        var copiaInside = new List<int>(_bolillasInside);
+        var copia = new Bolillero(copiaInside, _sorteador);
+        foreach (var bolilla in _bolillasOutside)
+            copia._bolillasOutside.Add(bolilla);
+
+        return copia;
     }
 }
